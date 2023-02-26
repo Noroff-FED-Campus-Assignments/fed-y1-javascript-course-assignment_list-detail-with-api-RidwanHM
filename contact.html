@@ -11,8 +11,8 @@
     />
     <meta name="author" content="_YOUR_NAME_" />
     <link rel="stylesheet" href="/style.css" />
-    <!-- TODO: Import Javascript -->
-    <title>Contact Us | _REPLACE_SITE_NAME</title>
+    <script type="module" src="/src/js/contact.js"></script>
+    <title>Contact Us | Rick & Morty</title>
   </head>
   <body class="animate__animated animate__fadeIn">
     <header class="l-header">
@@ -22,17 +22,42 @@
     <main class="l-main">
       <article role="doc-introduction">
         <h2>Contact form</h2>
+        <a href="/index.html">Return to Homepage</a>
 
-        <p>_REPLACE_INTRODUCTION_</p>
+        <p>You can contact us using this form</p>
       </article>
+          <form>
+            <div class="form-group">
+                <label for="js-name">Name</label>
+                <input type="text" id="js-name" required />
+                <p class="validation-container" id="js-name-message"></p>
+            </div>
 
-      <section role="form-section">
-        <!-- TODO: Creat Form elements here -->
-      </section>
+            <div class="form-group">
+                <label for="js-email">Email</label>
+                <input type="email" id="js-email" required />
+                <p class="validation-container" id="js-name-email"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="js-subject">Subject</label>
+                <input type="subject" id="js-subject" required />
+                <p class="validation-container" id="js-name-subject"></p>
+            </div>
+
+            <div class="form-group">
+              <label for="js-adress">Adress</label>
+              <input type="adress" id="js-adress" required />
+              <p class="validation-container" id="js-name-adress"></p>
+          </div>
+
+            <button type="submit">Submit</button>
+        </form>
+      </article>
     </main>
 
     <footer class="l-footer">
-      <small>Created with ❤️ by _REPLACE_</small>
+      <small>Created with ❤️ by Ridwan</small>
     </footer>
   </body>
 </html>

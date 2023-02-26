@@ -1,46 +1,41 @@
-/*
-============================================
-Constants
-@example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/games.html#L66
-============================================
-*/
 
-// TODO: Get DOM elements from the DOM
+const detailsContainer = document.querySelector("#detailscontainer");
 
-// TODO: Get the query parameter from the URL
+const queryString = document.location.search;
 
-// TODO: Get the id from the query parameter
+const params = new URLSearchParams(queryString);
 
-// TODO: Create a new URL with the id @example: https://www.youtube.com/shorts/ps7EkRaRMzs
+const id = params.get("id");
 
-/*
-============================================
-DOM manipulation
-@example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/games.html#L89
-============================================
-*/
 
-// TODO: Fetch and Render the list to the DOM
 
-// TODO: Create event listeners for the filters and the search
+const url = `https://rickandmortyapi.com/api/character/${id}`;
 
-/*
-============================================
-Data fectching
-@example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/games.html#L104
-============================================
-*/
 
-// TODO: Fetch an a single of objects from the API
+async function fetchRickAndMorty() {
+    try{
+        const response = await fetch(url);
+        const details = await response.json();
 
-/*
-============================================
-Helper functions
-============================================
-*/
 
-/**
- * TODO: Create a function to create a DOM element.
- * @example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/src/js/detail.js#L36
- * @param {item} item The object with properties from the fetched JSON data.
- */
+        createHtml(details);
+    }
+    catch (error){
+        console.log(error);
+        detailsContainer.innerHTML = error("error", error);
+    }
+}
+
+fetchRickAndMorty();
+
+
+function createHtml(details) {
+    detailsContainer.innerHTML = `
+      <h1>${details.name}</h1>
+      <img src=${details.image}> 
+      <p>Species:${details.species}</p>
+      <p>Status:${details.status}</p>
+      <p>Gender:${details.gender}</p>`;
+  }
+
+ 

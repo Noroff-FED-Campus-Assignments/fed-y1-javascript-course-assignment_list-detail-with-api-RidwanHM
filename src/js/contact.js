@@ -1,30 +1,97 @@
-/*
-============================================
-Constants
-@example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/advanced-form.html#L50
-============================================
-*/
+const formEL = document.querySelector("form");
+        const nameEL = document.querySelector("#js-name");
+        const emailEL = document.querySelector("#js-email");
+        const subjectEL = document.querySelector("#js-subject");
+        const adressEL = document.querySelector("#js-adress");
 
-// TODO: Get DOM elements from the DOM
+        formEL.addEventListener("submit", (event) => {
+            event.preventDefault();
 
-// TODO: Create event listeners for the form
+            const name = nameEL.value;
+            const email = emailEL.value;
+            const subject = subjectEL.value;
+            const adress = adressEL.value;
 
-/*
-============================================
-API calls
-@example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/advanced-form.html#L157
-============================================
-*/
 
-// TODO: Set up a function to fetch data from the API
+            if (name === "") {
+                alert("Please enter a name");
+                return;
+            }
 
-/*
-============================================
-Helper functions
-@example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/advanced-form.html#L118
-============================================
-*/
+            if (email === "") {
+                alert("Please enter a name");
+                return;
+            }
 
-// TODO: Create a function to validate an input field
+            if (subject === "") {
+                alert("Please enter a name");
+                return;
+            }
 
-// TODO: Create a function to create a DOM element
+            if (adress === "") {
+                alert("Please enter a name");
+                return;
+            }
+
+            alert("form submitted");
+        });
+
+        nameEL.addEventListener("blur", (event) => {
+            const name = event.target.value.trim();
+
+            const minLengthRegex = /^[a-zA-Z ]{2,}$/;
+            
+
+            if (minLengthRegex.test(name)) {
+                event.target.classList.add("is-success");
+                event.target.classList.remove("is-error");
+            } else {
+                event.target.classList.add("is-error");
+                event.target.classList.remove("is-success");
+            }
+        });
+
+        emailEL.addEventListener("blur", (event) => {
+            const email = event.target.value.trim();
+        
+            const emailRegex = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+        
+            if (emailRegex.test(email)) {
+                event.target.classList.add("is-success");
+                event.target.classList.remove("is-error");
+            } else {
+                event.target.classList.add("is-error");
+                event.target.classList.remove("is-success");
+            }
+        });
+        
+
+        subjectEL.addEventListener("blur", (event) => {
+            const name = event.target.value.trim();
+
+            const subjectRegex = /^.{10,}$/;
+
+            if (subjectRegex.test(name)) {
+                event.target.classList.add("is-success");
+                event.target.classList.remove("is-error");
+            } else {
+                event.target.classList.add("is-error");
+                event.target.classList.remove("is-success");
+            }
+        });
+
+
+        adressEL.addEventListener("blur", (event) => {
+            const name = event.target.value.trim();
+
+            const adressRegex = /^.{1,24}$/;
+            
+
+            if (adressRegex.test(name)) {
+                event.target.classList.add("is-success");
+                event.target.classList.remove("is-error");
+            } else {
+                event.target.classList.add("is-error");
+                event.target.classList.remove("is-success");
+            }
+        });

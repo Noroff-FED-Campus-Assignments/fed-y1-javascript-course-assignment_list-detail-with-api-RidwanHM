@@ -1,53 +1,38 @@
-/*
-============================================
-Constants
-@example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/games.html#L66
-============================================
-*/
+ const resultsContainer = document.querySelector(".results");
 
-// TODO: Get DOM elements from the DOM
 
-/*
-============================================
-DOM manipulation
-@example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/games.html#L89
-============================================
-*/
+ const url =
+ "https://rickandmortyapi.com/api/character";
 
-// TODO: Fetch and Render the list to the DOM
+async function fetchRickAndMorty() {
+ try {
+   const response = await fetch(url);
+   const json = await response.json();
 
-// TODO: Create event listeners for the filters and the search
 
-/**
- * TODO: Create an event listener to sort the list.
- * @example https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/search-form.html#L91
- */
+   resultsContainer.innerHTML = "";
 
-/*
-============================================
-Data fectching
-@example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/games.html#L104
-============================================
-*/
+   const RickAndMorty = json.results;
 
-// TODO: Fetch an array of objects from the API
+   RickAndMorty.forEach(function (RickAndMorty) {
+     resultsContainer.innerHTML += `
+     <a href="/details.html?id=${RickAndMorty.id}" class="card">
+         <div class="details">
+             <h4 class="name">${RickAndMorty.name}</h4>
+             <img src=${RickAndMorty.image}> 
+             <p>Species:${RickAndMorty.species}</p>
+             <p>Gender:${RickAndMorty.gender}</p>
+             <p>Status:${RickAndMorty.status}</p>
+             
 
-/*
-============================================
-Helper functions
-https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/games.html#L154
-============================================
-*/
+         </div>
+     </a>
+     `;
+   });
+ } catch (error) {
+   console.log(error);
+   resultsContainer.innerHTML = error("error", error);
+ }
+}
 
-/**
- * TODO: Create a function to filter the list of item.
- * @example https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/search-form.html#L135
- * @param {item} item The object with properties from the fetched JSON data.
- * @param {searchTerm} searchTerm The string used to check if the object title contains it.
- */
-
-/**
- * TODO: Create a function to create a DOM element.
- * @example https://github.com/S3ak/fed-javascript1-api-calls/blob/main/src/js/detail.js#L36
- * @param {item} item The object with properties from the fetched JSON data.
- */
+fetchRickAndMorty();
