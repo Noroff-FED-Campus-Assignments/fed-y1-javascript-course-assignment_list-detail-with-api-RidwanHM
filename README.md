@@ -1,4 +1,5 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg)](https://classroom.github.com/online_ide?assignment_repo_id=10260294&assignment_repo_type=AssignmentRepo)
+
 # FED Javascript 1 - Course Assignment
 
 This is a vanilla website that displays a list of items fetched from an API.
@@ -7,14 +8,28 @@ This project was bootstrapped with Vite.
 
 ## Resources
 
-- [Design](_LINK_TO_FIGMA_)
-- [Production deploy](_LINK_TO_WEBSITE_)
-- [Deployment CI](_LINK_TO_NETLIFY_VERCEL_DASHBOARD_)
-- [API Docs](_LINK_TO_API_DOCS_)
+- [Production deploy](https://bucolic-lebkuchen-91071e.netlify.app/)
+- [Deployment CI](https://github.com/Noroff-FED-Campus-Assignments/fed-y1-javascript-course-assignment_list-detail-with-api-RidwanHM)
+- [API Docs](https://rickandmortyapi.com)
 
 ## Report
 
-_ADD_YOUR_REPORT_HERE_
+Rick & Morty Api
+
+I had a course assignment that was about fetching and api. We could choose between many different api´s and my taste fell on rick and forty. Half of the reason is because I’m a fan of the show and the other reason was because I felt very comfortable with this api.
+
+I started with making a list on the home page where it display different characters from the show. One of the criteria was that it needed to display three different properties. I choose species, gender and status. This because it was many properties to choose from the json-list and these properties made most sense.
+
+When you click on one of the characters you get directed to the detail page. This usually show the details of one specific characters. Because it wasn’t many properties to choose from, then I decided to keep the same properties that was displayed on the list on the details page.
+
+Last page I made was the contact page. This page have a form that you can use to write on. If the wrong syntax is used the form would not submit and it will tell you were and what you are missing.
+
+Source and Links:
+https://rickandmortyapi.com/
+
+https://bucolic-lebkuchen-91071e.netlify.app/contact.html
+
+https://github.com/Noroff-FED-Campus-Assignments/fed-y1-javascript-course-assignment_list-detail-with-api-RidwanHM
 
 ## Getting Started
 
@@ -130,5 +145,5 @@ Make sure you go through this checklist before submitting your project to Moodle
 
 ## Authors
 
-- _YOURE_NAME_ (@_your_github_username_)
+- Ridwan Hashi Mohamud (@RidwanHM)
 - Monde Sineke (@S3ak)
