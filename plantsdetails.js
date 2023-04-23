@@ -8,7 +8,7 @@ const id = params.get("id");
 
 
 
-const url = `http://ridwanhmca.local/wp-json/wp/v2/posts/${id}`;
+const url = `https://excellent-things.flywheelsites.com/wp-json/wp/v2/posts/${id}`;
 
 
 async function fetchRickAndMorty() {

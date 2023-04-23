@@ -1,6 +1,6 @@
 const resultsContainer = document.querySelector(".eventcontainer");
 
-const url = "http://ridwanhmca.local/wp-json/wp/v2/posts/"
+const url = "https://excellent-things.flywheelsites.com/wp-json/wp/v2/posts/"
 
 async function fetchBlogs () {
     try {
