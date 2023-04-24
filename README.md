@@ -31,6 +31,15 @@ https://bucolic-lebkuchen-91071e.netlify.app/contact.html
 
 https://github.com/Noroff-FED-Campus-Assignments/fed-y1-javascript-course-assignment_list-detail-with-api-RidwanHM
 
+CMS course assignment
+
+I had a course assignment that was about cms. The task was to use Wordpress as a tool and to create a headless cms. I used Wordpress to make five different post related to my other course assignment, when I used a Rick and Morty api.That time we already had an api we could choose and just to use javascript to fectch it. Now I wanted to stay in the Rick and Morty world, and decided to make a n api about the planets in Rick and Morty. The fist page displays the whole list of planets by name, and if you press one of them you get quickly directed to the details page. Here you can only see the planet you choose. It display only the planets name. The Name, picture, info and date is displayed on the details page when you click on one of the planets name. I used first local when I was building the site and the json list form the local page. When I was finished I used flywheel as an host and used the json list there. This because now it can be displayed from every devices not only from my pc. I got the info and the pictures of the planets at fan page on the net.(sources)
+
+Sources:
+https://rickandmorty.fandom.com/wiki/Category:Planets
+
+https://github.com/Noroff-FED-Campus-Assignments/fed-y1-javascript-course-assignment_list-detail-with-api-RidwanHM
+
 ## Getting Started
 
 In the project directory, you can run:
