@@ -18,7 +18,7 @@ async function fetchBlogs () {
             resultsContainer.innerHTML += `
                 
                 <a href="/index.html"><p>Go Back</p></a>
-                <a href="/pdetails.html?id=${blog.id}">    
+                <a href="/details.html?id=${blog.id}">    
                 <h2>${blog.title.rendered}<h2>
                     <h4>${blog.content.rendered}<h4>
                     <h4>${blog.date}<h4>
