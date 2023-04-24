@@ -17,10 +17,10 @@ async function fetchBlogs () {
         blogs.forEach(function (blog) {
             resultsContainer.innerHTML += `
                 
-                <a href="/index.html"><p>Go Back</p></a>
+                
                 <a href="/details.html?id=${blog.id}">    
                 <h2>${blog.title.rendered}<h2>
-                <div>
+                <p> More Info </p>
                <a>
                `;                
 
