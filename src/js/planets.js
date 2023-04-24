@@ -20,8 +20,6 @@ async function fetchBlogs () {
                 <a href="/index.html"><p>Go Back</p></a>
                 <a href="/details.html?id=${blog.id}">    
                 <h2>${blog.title.rendered}<h2>
-                    <h4>${blog.content.rendered}<h4>
-                    <h4>${blog.date}<h4>
                 <div>
                <a>
                `;                

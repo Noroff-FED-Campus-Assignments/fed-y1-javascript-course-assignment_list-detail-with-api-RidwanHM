@@ -31,7 +31,7 @@ fetchRickAndMorty();
 function createHtml(blog) {
     detailsContainer.innerHTML = `
                 
-    <a href="/plantsdetails.html?id=${blog.id}">    
+       
     <h2>${blog.title.rendered}<h2>
         <h4>${blog.content.rendered}<h4>
         <h4>${blog.date}<h4>
